@@ -12,6 +12,8 @@
 		31190E54209ECA6D00827E36 /* GTBaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31190E53209ECA6D00827E36 /* GTBaseResponse.swift */; };
 		31190E57209ECAD400827E36 /* GTConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31190E56209ECAD400827E36 /* GTConstants.swift */; };
 		31190E5A209ECB9200827E36 /* NSObjectExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31190E59209ECB9200827E36 /* NSObjectExtention.swift */; };
+		31190E5D209ECEA000827E36 /* GTKingListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31190E5C209ECEA000827E36 /* GTKingListPresenter.swift */; };
+		31190E60209ED28D00827E36 /* GTKingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31190E5F209ED28D00827E36 /* GTKingListViewModel.swift */; };
 		31274F37209EB6D800B18ABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31274F36209EB6D800B18ABA /* AppDelegate.swift */; };
 		31274F3C209EB6D800B18ABA /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31274F3A209EB6D800B18ABA /* Home.storyboard */; };
 		31274F3E209EB6D900B18ABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31274F3D209EB6D900B18ABA /* Assets.xcassets */; };
@@ -21,9 +23,7 @@
 		31274F6C209EB93D00B18ABA /* GTBattle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31274F6B209EB93D00B18ABA /* GTBattle.swift */; };
 		31274F6F209EB98900B18ABA /* GTKing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31274F6E209EB98900B18ABA /* GTKing.swift */; };
 		31274F75209EC0BC00B18ABA /* GTAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31274F74209EC0BC00B18ABA /* GTAPIManager.swift */; };
-		52CED333B0DA9FF5C6CB13D0 /* Pods_GameOfThronesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4A5E7B4901EBA8B594983EC /* Pods_GameOfThronesTests.framework */; };
 		D8F10DF919BB41C3EDFC678C /* Pods_GameOfThrones.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0855ADBB5635A566BA826C4E /* Pods_GameOfThrones.framework */; };
-		DFF5C31AF9D33240D2388F3F /* Pods_GameOfThrones_GameOfThronesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25FB0F9D6AA77AE758524CB3 /* Pods_GameOfThrones_GameOfThronesTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +45,8 @@
 		31190E53209ECA6D00827E36 /* GTBaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GTBaseResponse.swift; path = GameOfThrones/Source/BackEnd/Common/GTBaseResponse.swift; sourceTree = SOURCE_ROOT; };
 		31190E56209ECAD400827E36 /* GTConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTConstants.swift; sourceTree = "<group>"; };
 		31190E59209ECB9200827E36 /* NSObjectExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtention.swift; sourceTree = "<group>"; };
+		31190E5C209ECEA000827E36 /* GTKingListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTKingListPresenter.swift; sourceTree = "<group>"; };
+		31190E5F209ED28D00827E36 /* GTKingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GTKingListViewModel.swift; sourceTree = "<group>"; };
 		31274F33209EB6D800B18ABA /* GameOfThrones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfThrones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31274F36209EB6D800B18ABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31274F3B209EB6D800B18ABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
@@ -79,8 +81,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52CED333B0DA9FF5C6CB13D0 /* Pods_GameOfThronesTests.framework in Frameworks */,
-				DFF5C31AF9D33240D2388F3F /* Pods_GameOfThrones_GameOfThronesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,8 +115,17 @@
 		31190E5B209ECCD000827E36 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				31190E5C209ECEA000827E36 /* GTKingListPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		31190E5E209ED27300827E36 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				31190E5F209ED28D00827E36 /* GTKingListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		31274F2A209EB6D800B18ABA = {
@@ -190,6 +199,7 @@
 		31274F5F209EB82B00B18ABA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				31190E5E209ED27300827E36 /* ViewModel */,
 				31190E5B209ECCD000827E36 /* Presenter */,
 				31274F60209EB82B00B18ABA /* Controller */,
 				31274F62209EB82B00B18ABA /* Interactor */,
@@ -492,9 +502,11 @@
 				31274F65209EB82B00B18ABA /* GTKingListViewController.swift in Sources */,
 				31190E57209ECAD400827E36 /* GTConstants.swift in Sources */,
 				31274F37209EB6D800B18ABA /* AppDelegate.swift in Sources */,
+				31190E60209ED28D00827E36 /* GTKingListViewModel.swift in Sources */,
 				31190E5A209ECB9200827E36 /* NSObjectExtention.swift in Sources */,
 				31274F6C209EB93D00B18ABA /* GTBattle.swift in Sources */,
 				31190E54209ECA6D00827E36 /* GTBaseResponse.swift in Sources */,
+				31190E5D209ECEA000827E36 /* GTKingListPresenter.swift in Sources */,
 				31274F6F209EB98900B18ABA /* GTKing.swift in Sources */,
 				31274F75209EC0BC00B18ABA /* GTAPIManager.swift in Sources */,
 				31190E4F209EC69B00827E36 /* GTEndPoint.swift in Sources */,
@@ -699,6 +711,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7T55UEMM4L;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = GameOfThronesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -721,6 +734,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7T55UEMM4L;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = GameOfThronesTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
